@@ -1,0 +1,150 @@
+#topBar{
+	border-top: 10px solid #2d3033;
+	text-align: center;
+	height: 35px;
+	position: relative;	
+}
+#bottomBar{
+	border-bottom: 10px solid #2d3033;
+	text-align: center;
+	height: 100px;
+	position: relative;	
+}
+
+#leftSideBar{
+	border-radius: 5px;
+	top: 85px;
+	border:2px solid #2d3033;
+	width: 25%;
+	height: 85%;
+	float: left;
+	display:inline;
+	position:fixed;
+	margin-left: 2.5%;
+	background-image:url("img/bookone.jpg");
+ 	background-position:center center;
+ 	background-repeat: no-repeat;
+
+}
+
+#rightSideBar{
+	border-radius: 5px;
+	top: 85px;
+	left: 0;
+ 	bottom: 0px;
+ 	right: 0;
+	border:2px solid #2d3033;
+	width: 25%;
+	height: 85%;
+	float: right;
+	display: inline;
+	margin-left: 72%;
+	position: fixed;
+	background-image:url("img/booktwo.jpg");
+ 	background-position:center center;
+ 	background-repeat: no-repeat;
+
+}
+
+body {
+
+	background-color: #ddbc95;
+	margin: 0 auto;
+	
+
+}
+
+.fullscreen {
+	position: relative;
+ 	top: 40px;
+ 	left: 0px;
+ 	bottom: 0px;
+ 	right: 0px;
+ 	overflow: auto;
+	display: inline;
+ 	
+ }
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+
+p {
+	position: relative;
+	text-align: center;
+}
+
+
+#resultbox {
+	top:40px;
+	border-radius: 5px;
+	position: relative;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	height: 100px;
+	width: 450px;
+	background-color:#ffffff;
+	text-align: left;
+	border: 4px solid #90afc5;
+	color:#500805;
+ 	font-size:18px;
+ 	text-shadow: 1px 1px 1px #000;
+ 	
+}
+
+
+#button1 {
+ 	border-radius: 15px;
+ 	position: relative;
+ 	display:inline;
+ 	border: 2px solid #90afc5;
+ 	text-shadow: 1px 1px 1px #000;
+ 	padding: 0px 0px 75px 0px;
+ 	background-image:url("img/button.jpg");
+ 	background-position:center center;
+ 	background-repeat: no-repeat;
+ 	height: 155px;
+ 	width: 250px;
+ 	color:#2d3033;
+ 	font-size:14px;
+ 	
+}
+
+#button2 {
+ 	position: relative;
+ 	display: inline;
+ 	border-radius: 15px;
+ 	border: 2px solid #90afc5;
+ 	text-shadow: 1px 1px 1px #000;
+ 	padding: 0px 0px 75px 0px;
+ 	background-image:url("img/button2.jpg");
+ 	background-position:center center;
+ 	background-repeat: no-repeat;
+ 	height: 155px;
+ 	width: 250px;
+ 	color:#2d3033;
+ 	font-size:14px;
+ 	
+}
+
+#button3 {
+ 	border-radius: 15px;
+ 	position: relative;
+ 	border: 2px solid #90afc5;
+ 	text-shadow: 1px 1px 1px #000;
+ 	padding: 0px 0px 75px 0px;
+ 	background-image:url("img/button3.jpg");
+ 	background-position:center center;
+ 	background-repeat: no-repeat;
+ 	height: 155px;
+ 	width: 250px;
+ 	color:#2d3033;
+ 	font-size:14px;
+}
+
+
+
+
