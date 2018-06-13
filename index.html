@@ -21,28 +21,22 @@
 
 <div class="fullscreen">
 
-	<div id="leftSideBar">
+	<div id="leftSideBar"></div>
 
-	</div>
-
-	<div id="rightSideBar">
-
-	</div>
+	<div id="rightSideBar"></div>
 	
-	<p> 
-		<button id="button1" onclick="buttonClick()">Click for Wisdom</button> <!-- Runs the buttonClick function when a user clicks on this html element -->
-	</p>
+	<div> 
+		<button id="button1" onclick="displayPrior(priorHypothesis)">Display Prior Hypothesis</button> <!-- Runs the buttonClick function when a user clicks on this html element -->
+		<button id="button2" onclick="displayTrueProb(probTrueWithEvent)">Display True Probability</button>
+		<button id="button3" onclick="displayFalseProb(probFalseWithEvent)">Display False Probability</button>
+		<button id="button3" 
+			onclick="displayAllProb(priorHypothesis, probTrueWithEvent, probFalseWithEvent)">
+			Display All Probabilities
+		</button>
+	</div>
 
-	<p>
-		<button id="button2" onclick="buttonClickTwo()">Click to Submit Name</button>
-	</p>
-	<p>
-		<button id="button3" onclick="buttonClickThree()">Click for Beye's Theorem</button>
-	</p>
 
-	<p id="resultbox"><b>Results:</font></b>
-
-	</p>
+	<p id="resultbox"> <b>Results:</font></b> </p>
 
 </div>
 <div id= "bottomBar">
