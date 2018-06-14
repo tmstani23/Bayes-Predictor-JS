@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="cssfile.css">	
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script type="text/javascript" src="predict.js"></script>
+
 </head>
 
 <body>
@@ -26,13 +26,21 @@
 	<div id="rightSideBar"></div>
 	
 	<div> 
-		<button id="button1" onclick="displayPrior(priorHypothesis)">Display Prior Hypothesis</button> <!-- Runs the buttonClick function when a user clicks on this html element -->
-		<button id="button2" onclick="displayTrueProb(probTrueWithEvent)">Display True Probability</button>
+		<label for="base-input">Enter the base rate decimal probability. </label>
+		<input type="number" id = 'base-rate' value="1">
+		<label for="true-input">Enter decimal probability of event if hypothesis is true. </label>
+		<input type="number" id = 'true-input' value="1">
+		<label for="false-input">Enter decimal probability of event if hypothesis is false</label>
+		<input type="number" id = 'false-input'value="1">
+		 <button id="button1" onclick="calcAnswer()">Display Prior Hypothesis</button>
+		<!--
+		 <button id="button2" onclick="displayTrueProb(probTrueWithEvent)">Display True Probability</button>
 		<button id="button3" onclick="displayFalseProb(probFalseWithEvent)">Display False Probability</button>
 		<button id="button3" 
 			onclick="displayAllProb(priorHypothesis, probTrueWithEvent, probFalseWithEvent)">
 			Display All Probabilities
-		</button>
+		</button> 
+		-->
 	</div>
 
 
@@ -44,7 +52,7 @@
  	</H1>
 </div>
 
-
+<script type="text/javascript" src="predict.js"></script>
 </body>
 
 </html>
