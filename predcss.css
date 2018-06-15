@@ -1,0 +1,12 @@
+body {
+	margin: 0 auto;
+}
+
+.container-div {
+	display: grid;
+	grid-column: 3em;
+	grid-row: 3em;
+}
+.main {
+	margin: 0 auto;
+}

@@ -2,40 +2,44 @@
 <html>
 
 <head>
-
-	<title> Wisdom Connection </title>
+	<meta charset="UTF-8">
+	<meta name="author" content="John Doe">
+	<meta name="keywords" content="HTML,CSS,JavaScript,Bayes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Bayes Predictor Hypothesize JS </title>
 	<!-- <link rel="stylesheet" type="text/css" href="cssfile.css">	 -->
 </head>
 
 <body>
-
-	<div id= "topBar">
-		<H1>Wisdom and Probability Synthesis
-		</H1>
+	<div class = "container-div"> 
+		<div class = "banner-div">
+			<H1>Hypothesize JS
+		</div>
+				
+		<div class = "main"> 
+			<label for="base-input">Enter the base probability. </label>
+			<input type="text" id ='base-rate' onchange= "updateX(priorHypothesis)" value="1">
+			<label for="true-input">Enter probability of evidenceevent if hypothesis is true. </label>
+			<input type="text" id ='true-input' onchange= "updateY(probTrueWithEvent)" value="1">
+			<label for="false-input">Enter probability of evidence event if hypothesis is false</label>
+			<input type="text" id ='false-input' onchange= "updateZ(probFalseWithEvent)" value="1">
+			 <button id="button1" onclick="calcAnswer(x,y,z)">Display Prior Hypothesis</button>
+			<!--
+			 <button id="button2" onclick="displayTrueProb(probTrueWithEvent)">Display True Probability</button>
+			<button id="button3" onclick="displayFalseProb(probFalseWithEvent)">Display False Probability</button>
+			<button id="button3" 
+				onclick="displayAllProb(priorHypothesis, probTrueWithEvent, probFalseWithEvent)">
+				Display All Probabilities
+			</button> 
+			-->
+		</div>
+	
+		<div class = "result-div">
+			<p id="result-p"> </p>
+		</div>
+		
 	</div>
-			
-	<div> 
-		<label for="base-input">Enter the base rate decimal probability. </label>
-		<input type="text" id ='base-rate' value="1">
-		<label for="true-input">Enter decimal probability of event if hypothesis is true. </label>
-		<input type="text" id ='true-input' value="1">
-		<label for="false-input">Enter decimal probability of event if hypothesis is false</label>
-		<input type="text" id ='false-input'value="1">
-		 <button id="button1" onclick="testUpdate(priorHypothesis)">Display Prior Hypothesis</button>
-		<!--
-		 <button id="button2" onclick="displayTrueProb(probTrueWithEvent)">Display True Probability</button>
-		<button id="button3" onclick="displayFalseProb(probFalseWithEvent)">Display False Probability</button>
-		<button id="button3" 
-			onclick="displayAllProb(priorHypothesis, probTrueWithEvent, probFalseWithEvent)">
-			Display All Probabilities
-		</button> 
-		-->
-	</div>
-
-
-	<p id="resultbox"> <b>Results:</font></b> </p>
-
-
+	
 	<script type="text/javascript" src="predict.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </body>
