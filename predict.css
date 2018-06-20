@@ -1,0 +1,19 @@
+
+.container {
+	
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr, 1fr, 1fr;
+	 grid-auto-columns: 200px; /*used to restrict column width */
+	background-color: lightslategray;
+	border: 2px solid black;
+	grid-gap: 1rem;
+}
+.container > div {
+	border: 2px black solid;
+	background-color: lightblue;
+}
+#root {
+	border: 4px solid black;
+	
+}

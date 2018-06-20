@@ -18,7 +18,7 @@ let updateZ = (input) => console.log(z = input.value);
 //Compute answer probability:
 const calcAnswer = () => testAnswer((x*y) / ((x*y) + (z - (z*x))));
 
-const testAnswer = (input) => { input < 0 || input > 1 || typeof input != "number" 
+const testAnswer = (input) => { input < 0 || input > 1 || isNaN(input) 
     ? displayMsg("Inputs must be a decimal number between 0 and 1")
     : displayAnswer(`Percent probability your hypothesis is correct: ${(input * 100).toFixed(2)}%`) 
 };

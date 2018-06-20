@@ -9,14 +9,14 @@
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "file": "${workspaceFolder}/predict-react/index2.html"
+            "file": "${workspaceFolder}/index.html"
         },
         {
             "name": "Launch localhost",
             "type": "firefox",
             "request": "launch",
             "reAttach": true,
-            "url": "http://localhost/predict-react/index2.html",
+            "url": "http://localhost/index.html",
             "webRoot": "${workspaceFolder}"
         },
         {
