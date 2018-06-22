@@ -8,7 +8,7 @@ function DisplayInput(props) {
 }
 function DisplayVariables(props) {
     return (
-        <div>
+        <div className = "variables-inner-div">
             <p> Base rate (prior) probability: 
                 {` ${props.prior * 100}%`}</p>
             <p>Probability of evidence event if hypothesis is true:
@@ -26,7 +26,7 @@ class App extends React.Component {
             priorHypothesis: 0,
             probTrueWithEvent: 0,
             probFalseWithEvent: 0,
-            answer: 0
+            answer: "0%"
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -34,20 +34,14 @@ class App extends React.Component {
     }
   
     handleChange(event) {
-        //this.setState({priorHypothesis: event.target.value});
-        //if test answer is false set state else display message
-        console.log(event.target.value);
-        if(this.testInput(event.target.value) === true) {
-            //this.setState("true");
-            //UPDATE THIS SECTION OR REMOVE:
-            this.setState({[event.target.name]: "Inputs must be a decimal number between 0 and 1"})
-            //this.displayMsg("Inputs must be a decimal number between 0 and 1")
-        }
-        else {
-            this.setState( {[event.target.name]: event.target.value} )
-        }
-        //this.testAnswer({[event.target.name]: event.target.value});
-        //this.setState( {[event.target.name]: event.target.value} );
+        return this.testInput(event.target.value) === true
+        ? this.setState({
+            answer: "Inputs must be a decimal number between 0 and 1",
+            [event.target.name]: 0
+            })
+        : this.setState( {
+            answer: "0%",
+            [event.target.name]: event.target.value} );
     }
   
     handleSubmit(event) {
@@ -66,9 +60,9 @@ class App extends React.Component {
     testAnswer(input) {
         return input < 0 || input > 1 || isNaN(input) 
         ? this.displayMsg("Inputs must be a decimal number between 0 and 1")
-        : this.displayMsg(` ${(input * 100).toFixed(2)} %`);
+        : this.displayMsg(` ${(input * 100).toFixed(2)}%`);
     }
-    displayMsg(msg, location) {
+    displayMsg(msg) {
         return this.setState({answer: msg});
     }
     render() {
@@ -78,15 +72,17 @@ class App extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         
                         <DisplayInput name="priorHypothesis" value = {this.state.priorHypothesis} onChange={this.handleChange} text="Base Rate (prior) Probability:"/>
-                        <DisplayInput name="probTrueWithEvent" value = {this.state.probTrueWithEvent} onChange={this.handleChange} text="False Positive Probability:"/>
-                        <DisplayInput name="probFalseWithEvent" value = {this.state.probFalseWithEvent} onChange={this.handleChange} text="False Negative Probability:"/>
+                        <DisplayInput name="probTrueWithEvent" value = {this.state.probTrueWithEvent} onChange={this.handleChange} text="Hit Rate:"/>
+                        <DisplayInput name="probFalseWithEvent" value = {this.state.probFalseWithEvent} onChange={this.handleChange} text="False Alarm Rate:"/>
                         <input type="submit" value="Submit" />
                     </form>
                 </div>
-                <DisplayVariables prior = {this.state.priorHypothesis} probTrue = {this.state.probTrueWithEvent}probFalse = {this.state.probFalseWithEvent}
-                />
-                <div>
-                    <h1>Probability your hypothesis is correct: {`${this.state.answer}%`}</h1>
+                <div className="variables-div">
+                    <DisplayVariables  prior = {this.state.priorHypothesis} probTrue = {this.state.probTrueWithEvent}probFalse = {this.state.probFalseWithEvent} />
+                </div>
+                
+                <div className = "answer-div">
+                    <h1>Probability your hypothesis is correct: {this.state.answer}</h1>
                 </div>
             </div>
                 
