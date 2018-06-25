@@ -9,6 +9,7 @@ function DisplayInput(props) {
 function DisplayVariables(props) {
     return (
         <div className = "variables-inner-div">
+            <h3>Variables: </h3>
             <p> Base rate (prior) probability: 
                 {` ${props.prior * 100}%`}</p>
             <p>Probability of evidence event if hypothesis is true:
