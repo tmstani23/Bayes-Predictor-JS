@@ -17,25 +17,17 @@
 <body>
 	<div class = "container-div"> 
 		<div class = "banner-div">
-			<H1>Hypothesize JS
+			<h1>Bayes' Calculator JS</h1>
 		</div>
 				
 		<div class = "main"> 
 			<label for="base-input">Enter the base probability. </label>
 			<input type="text" id ='base-rate' onchange= "updateX(priorHypothesis)" value="1">
-			<label for="true-input">Enter probability of evidenceevent if hypothesis is true. </label>
+			<label for="true-input">Enter probability of evidence event if hypothesis is true. </label>
 			<input type="text" id ='true-input' onchange= "updateY(probTrueWithEvent)" value="1">
 			<label for="false-input">Enter probability of evidence event if hypothesis is false</label>
 			<input type="text" id ='false-input' onchange= "updateZ(probFalseWithEvent)" value="1">
 			 <button id="button1" onclick="calcAnswer(x,y,z)">Display Prior Hypothesis</button>
-			<!--
-			 <button id="button2" onclick="displayTrueProb(probTrueWithEvent)">Display True Probability</button>
-			<button id="button3" onclick="displayFalseProb(probFalseWithEvent)">Display False Probability</button>
-			<button id="button3" 
-				onclick="displayAllProb(priorHypothesis, probTrueWithEvent, probFalseWithEvent)">
-				Display All Probabilities
-			</button> 
-			-->
 		</div>
 	
 		<div class = "result-div">
