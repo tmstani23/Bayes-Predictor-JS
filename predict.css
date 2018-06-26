@@ -1,7 +1,11 @@
 body {
-	
+	margin: 0px;
 }
 #width-container {
+	width: 75%;
+	margin: 0 auto;
+}
+#root {
 	width: 75%;
 	margin: 0 auto;
 }
@@ -18,45 +22,36 @@ h1 {
 	font-size: 42px;
 	margin-bottom: 0px;
 }
-div {
 
-}
 .banner-div {
 	background-color: darkolivegreen;
 	color: white;
 	text-align: center;
-	padding: 10px;
-	width: 100vw;
-	
-	
-	
+	padding: 30px;
+	margin: 0px;	
 }
-#root {
 
-}
 .container {
 	display: grid;
-	grid-template-columns: auto, 1fr;
+	grid-template-columns: auto, auto;
 	grid-template-rows: auto, auto;
 	/*grid-auto-columns: 400px; used to restrict column width */
 	grid-gap: 1rem;
 	width: 75%;
 	margin: 0 auto;
-	
-	
-	
 }
 .container > div {
 	border-radius: 5px;
-	margin-top: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	background-color: #a514ff;
-	padding: 10px;
+	
+	margin-top: 1em;
 }
 .answer-div {
 	grid-row: 2 / 3;
 	grid-column: 1 / 4;
-	
+	padding: 20px;
+	text-align: center;
 }
 .form-div {
 	grid-row: 1 / 2;
@@ -64,7 +59,7 @@ div {
 }
 .variables-div{
 	grid-row: 1 / 2;
-	  grid-column: 2 / 4;
+	grid-column: 2 / 4;
 	display: flex;
 	align-items: center;
 	justify-content: center;

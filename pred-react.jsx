@@ -83,7 +83,7 @@ class App extends React.Component {
                 </div>
                 
                 <div className = "answer-div">
-                    <h1>Probability your hypothesis is correct: {this.state.answer}</h1>
+                    <h3>Probability your hypothesis is correct: {this.state.answer}</h3>
                 </div>
             </div>
                 
