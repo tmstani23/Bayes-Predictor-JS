@@ -9,7 +9,7 @@ function DisplayInput(props) {
 function DisplayVariables(props) {
     return (
         <div className = "variables-inner-div">
-            <h3>Variables: </h3>
+            <h3>Variables </h3>
             <p> Base rate (prior) probability: 
                 {` ${props.prior * 100}%`}</p>
             <p>Probability of evidence event if hypothesis is true:
@@ -71,11 +71,11 @@ class App extends React.Component {
             <div className="container"> 
                 <div className="form-div">
                     <form onSubmit={this.handleSubmit}>
-                        
-                        <DisplayInput name="priorHypothesis" value = {this.state.priorHypothesis} onChange={this.handleChange} text="Base Rate (prior) Probability:"/>
-                        <DisplayInput name="probTrueWithEvent" value = {this.state.probTrueWithEvent} onChange={this.handleChange} text="Hit Rate:"/>
-                        <DisplayInput name="probFalseWithEvent" value = {this.state.probFalseWithEvent} onChange={this.handleChange} text="False Alarm Rate:"/>
-                        <input type="submit" value="Submit" />
+                        <h3>Inputs</h3>
+                        <DisplayInput name="priorHypothesis" value = {this.state.priorHypothesis} onChange={this.handleChange} text="Base Rate (prior)"/>
+                        <DisplayInput name="probTrueWithEvent" value = {this.state.probTrueWithEvent} onChange={this.handleChange} text="Hit Rate"/>
+                        <DisplayInput name="probFalseWithEvent" value = {this.state.probFalseWithEvent} onChange={this.handleChange} text="False Alarm Rate"/>
+                        <input id="submit" type="submit" value="Submit" />
                     </form>
                 </div>
                 <div className="variables-div">
@@ -83,7 +83,8 @@ class App extends React.Component {
                 </div>
                 
                 <div className = "answer-div">
-                    <h3>Probability your hypothesis is correct: {this.state.answer}</h3>
+                    <h3>Result</h3>
+                    <p>Probability your hypothesis is correct: {this.state.answer}</p>
                 </div>
             </div>
                 
