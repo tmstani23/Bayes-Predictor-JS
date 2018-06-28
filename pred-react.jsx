@@ -9,13 +9,13 @@ function DisplayInput(props) {
 function DisplayVariables(props) {
     return (
         <div className = "variables-inner-div">
-            <h3>Variables </h3>
+            <h3>Probabilities</h3>
             <p> Base rate (prior) probability: 
-                {` ${props.prior * 100}%`}</p>
+                <strong> {` ${props.prior * 100}%`} </strong></p>
             <p>Probability of evidence event if hypothesis is true:
-                {` ${props.probTrue * 100}%`}</p>
+                <strong> {` ${props.probTrue * 100}%`} </strong></p>
             <p>Probability of evidence event if hypothesis is false:
-                {` ${props.probFalse * 100}%`}</p>
+                <strong> {` ${props.probFalse * 100}%`} </strong></p>
         </div>
     )
 }
@@ -79,12 +79,12 @@ class App extends React.Component {
                     </form>
                 </div>
                 <div className="variables-div">
-                    <DisplayVariables  prior = {this.state.priorHypothesis} probTrue = {this.state.probTrueWithEvent}probFalse = {this.state.probFalseWithEvent} />
+                    <DisplayVariables prior = {this.state.priorHypothesis} probTrue = {this.state.probTrueWithEvent}probFalse = {this.state.probFalseWithEvent} />
                 </div>
                 
                 <div className = "answer-div">
                     <h3>Result</h3>
-                    <p>Probability your hypothesis is correct: {this.state.answer}</p>
+                    <p>Probability your hypothesis is correct: <strong> {this.state.answer} </strong> </p> 
                 </div>
             </div>
                 
@@ -93,5 +93,5 @@ class App extends React.Component {
 }
 ReactDOM.render(
     <App />,
-    document.getElementById('root')
+    document.getElementById('app')
 );

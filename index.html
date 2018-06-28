@@ -7,6 +7,7 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     <script src="pred-react.jsx" type="text/babel"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="predict.css">
 </head>
   <body>
@@ -19,9 +20,9 @@
     
     <div id="width-container">
       
-    <div id="root"></div>
+    <div id="app"></div>
       
-    <div>
+    <div class="content-div">
       <h3>Bayes' Theorem</h3>
       <p>
         Bayes’ theorem (alternatively Bayes’ law or Bayes' rule, also written as Bayes’s theorem describes the probability of an event, based on prior knowledge of conditions that might be related to the event.  With the Bayesian probability interpretation the theorem expresses how a subjective degree of belief should rationally change to account for availability of related evidence. Bayes' theorem is useful because it helps improve a weakness in our intuition about how probable it is a given hypothesis will occur. <a target="_blank" href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes' theorem on Wikipedia</a></p>
@@ -54,19 +55,16 @@
           
       <p>
         If we plug these variables into the calculator we see the witness is correct about 41% of the time.  This is counter intuitive because the witness was proven to be accurate 80% of the time.  The base rate must be as accurate, and relevant to the real life situation, as possible.  The theorem results are most influenced  and weighted by the base rate (prior probability).  A base rate of 1% will result in less than 5% probability of hypothesis being true even if the hit rate is above 80%. Also, If one doesn't know the hit rate, or false alarm rate, estimates can be supplied for these variables.<br> <br>
-          
         If the result hypothesis is entered as the new base rate, and the other variables remain the same, one can get an intuition of how the probability of the hypothesis becomes more certain given the mounting evidence.  It's interesting to note that if a base rate probability is quite low than even with a high hit rate probability it will take many new evidence events to even increase the hypothesis probability to something greater than 50%. This reveals that even if an evidence event seems to be high proof of the hypothesis it is actually far more likely to be near the base rate. <br>
-
-        I encourage you to use this as a practical life tool for reducing anxieties, increasing certainty, checking your intuition and predicting the future.  Enjoy!
       </p>
     </div>
   </div>
     <div class ='footer'>
         <h3>Visit me:</h3>
         <div>
-          <a href="https://github.com/tmstani23">Github</a>
-          <a href="https://codepen.io/tmstani23/">Codepen</a>
-          <a href="https://www.linkedin.com/in/timothy-stanislav-54874b13/">LinkedIn</a>
+          <a target="_blank" href="https://github.com/tmstani23">Github</a>
+          <a target="_blank" href="https://codepen.io/tmstani23/">Codepen</a>
+          <a target="_blank" href="https://www.linkedin.com/in/timothy-stanislav-54874b13/">LinkedIn</a>
         </div>
         <p>This site was built with React JS, Babel, HTML and CSS <br>
           Created by: Timothy Stanislav - IndoorKin Productions &copy;</p>
