@@ -34,38 +34,26 @@ class App extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
   
-    handleChange(event) {
-        return this.testInput(event.target.value) === true
-        ? this.setState({
-            answer: "Inputs must be a decimal number between 0 and 1",
-            [event.target.name]: 0
-            })
-        : this.setState( {
-            answer: "0%",
-            [event.target.name]: event.target.value} );
-    }
-  
+    handleChange = (event) => this.testInput(event.target.value) === true
+        ? this.setState( {answer: "Inputs must be a decimal number between 0 and 1", [event.target.name]: 0})
+        : this.setState( {answer: "0%", [event.target.name]: event.target.value} );
+
     handleSubmit(event) {
-        
         this.calcBayes(this.state.priorHypothesis, this.state.probTrueWithEvent, this.state.probFalseWithEvent);
         event.preventDefault();
     }
-    calcBayes(x,y,z) {
-        return this.testAnswer((x*y) / ((x*y) + (z - (z*x))));
-    }
-    testInput(input){
-        return input < 0 || input > 1 || isNaN(input) 
-        ? true
-        : false;
-    }
-    testAnswer(input) {
-        return input < 0 || input > 1 || isNaN(input) 
-        ? this.displayMsg("Inputs must be a decimal number between 0 and 1")
-        : this.displayMsg(` ${(input * 100).toFixed(2)}%`);
-    }
-    displayMsg(msg) {
-        return this.setState({answer: msg});
-    }
+    
+    
+    calcBayes = (x,y,z) => this.testAnswer((x*y) / ((x*y) + (z - (z*x))));
+    
+    testInput = (input) => input < 0 || input > 1 || isNaN(input); 
+    
+    testAnswer = (input) => input < 0 || input > 1 || isNaN(input) 
+    ? this.displayMsg("Inputs must be a decimal number between 0 and 1")
+    : this.displayMsg(` ${(input * 100).toFixed(2)}%`);
+    
+    displayMsg = (msg) => this.setState({answer: msg});
+    
     render() {
         return (
             <div className="container"> 
