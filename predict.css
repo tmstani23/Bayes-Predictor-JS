@@ -33,6 +33,9 @@ code {
 	  width: 95%;
 	  margin: 10px;
 	}
+	.footer > div {
+		width: 95%;
+	  }
   }
 #app {
 	margin: 0 auto;
@@ -156,9 +159,15 @@ li {
 }
 blockquote {
 	font-style: italic;
+	box-shadow: -3px 0 0 0 var(--darkGrey),-6px 0 0 0 var(--gold),-9px 0 0 0 var(--black);
+	padding: 10px;
 }
 .footer {
 	text-align: center;
+	display: flex;
+ 	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
 	background: linear-gradient(to right, var(--lightGrey), var(--medGrey), var(--darkGrey));
 	padding: 10px;
 }
