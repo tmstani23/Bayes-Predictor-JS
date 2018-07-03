@@ -7,6 +7,7 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     <script src="pred-react.jsx" type="text/babel"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Roboto" rel="stylesheet"> <!-- Fonts -->
     <link rel="stylesheet" type="text/css" href="predict.css">
 </head>
   <body>
@@ -15,29 +16,30 @@
       <h1>Probability Calculator</h1>
       <h3>Calculate event probabilities using Bayes' theorem.  </h3>
     </div>
-    <div id="root"></div>
+    
     
     <div id="width-container">
-
       
-    <div>
+    <div id="app"></div>
+      
+    <div class="content-div">
       <h3>Bayes' Theorem</h3>
       <p>
-        Bayes’ theorem (alternatively Bayes’ law or Bayes' rule, also written as Bayes’s theorem describes the probability of an event, based on prior knowledge of conditions that might be related to the event.  With the Bayesian probability interpretation the theorem expresses how a subjective degree of belief should rationally change to account for availability of related evidence. Bayes' theorem is useful because it helps improve a weakness in our intuition about how probable it is a given hypothesis will occur. <a target="_blank" href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes' theorem on Wikipedia</a></p>
+        Bayes’ theorem (alternatively Bayes’ law or Bayes' rule, also written as Bayes’s theorem describes the probability of an event, based on prior knowledge of conditions that might be related to the event.  With the Bayesian probability interpretation the theorem expresses how a subjective degree of belief should rationally change to account for availability of related evidence. Bayes' theorem is useful because it helps improve a weakness in our intuition about how probable it is a given hypothesis will occur. <a target="_blank" href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes' theorem on Wikipedia</a>
+      </p>
 
       <h3>Blue Cab Hit and Run</h3>
-      <p>below is an example from Daniel Kahneman's book Thinking Fast and Slow</p>
+      <p>Below is an example from Daniel Kahneman's book Thinking Fast and Slow</p>
       <blockquote>
         A cab was involved in a hit and run accident at night. Two cab companies, the Green and the Blue, operate in the city. 85% of the cabs in the city are Green and 15% are Blue. A witness identified the cab as Blue. The court tested the reliability of the witness under the same circumstances that existed on the night of the accident and concluded that the witness correctly identified each one of the two colours 80% of the time and failed 20% of the time.
 
         What is the probability that the cab involved in the accident was Blue rather than Green knowing that this witness identified it as Blue?
       </blockquote>
       
-      <h3>How to Apply:</h3>
+      <h3>How it Works</h3>
       <ul> 
-          <!-- Bayes formula: (x*y) / ((x*y) + (z*1 - z*x))
-          x=displayprior / y=displaytrueprob / z = displayfalseprob -->
-        <li>The base rate (Baysian prior) probability is 0.85 because 85% of the cars are blue.</li>
+    
+        <li>The base rate (Bayesian prior) probability is 0.85 because 85% of the cars are green.</li>
         <li>The hit rate is 0.80 because the reliability of the witness is 80% correct identification.</li>
         <li>The false alarm rate is 0.20 because the witness is incorrect 20% of the time.</li>
         <li> 
@@ -52,20 +54,18 @@
       </ul>
           
       <p>
-        If we plug these variables into the calculator we see the witness is correct about 41% of the time.  This is counter intuitive because the witness was proven to be accurate 80% of the time.  The base rate must be as accurate, and relevant to the real life situation, as possible.  The theorem results are most influenced  and weighted by the base rate (prior probability).  A base rate of 1% will result in less than 5% probability of hypothesis being true even if the hit rate is above 80%. Also, If one doesn't know the hit rate, or false alarm rate, estimates can be supplied for these variables.<br> <br>
-          
-        If the result hypothesis is entered as the new base rate, and the other variables remain the same, one can get an intuition of how the probability of the hypothesis becomes more certain given the mounting evidence.  It's interesting to note that if a base rate probability is quite low than even with a high hit rate probability it will take many new evidence events to even increase the hypothesis probability to something greater than 50%. This reveals that even if an evidence event seems to be high proof of the hypothesis it is actually far more likely to be near the base rate. <br>
-
-        I encourage you to use this as a practical life tool for reducing anxieties, increasing certainty, checking your intuition and predicting the future.  Enjoy!
+        If we plug these variables into the calculator we see the probability the hit and run cab was blue is only 41%.  Thus, Even though the witness is correct 80% of the time the actually probability the cab was blue is 41%. The theorem results are most influenced and weighted by the base rate (prior probability). The result is more likely to be near the base rate.  This is true even if an evidence event seems to be high proof of the hypothesis.  A base rate of 1% will result in 3.88% probability of hypothesis with a hit rate at 80%.  If a base rate probability is less than 1%, even with a 90% hit rate probability, the result probability will only be 8.3%.  It will take many new evidence events to even increase the hypothesis probability to greater than 50%. <br> <br> 
+        
+        If the result hypothesis is entered as the new base rate, and the other variables remain the same, one can get an intuition of how the probability of the hypothesis becomes more certain given the mounting evidence.  The base rate must be as accurate, and relevant to the real life situation, as possible. If one doesn't know the hit rate, or false alarm rate, estimates can be supplied for these variables.   <br>
       </p>
     </div>
   </div>
     <div class ='footer'>
         <h3>Visit me:</h3>
         <div>
-          <a href="https://github.com/tmstani23">Github</a>
-          <a href="https://codepen.io/tmstani23/">Codepen</a>
-          <a href="https://www.linkedin.com/in/timothy-stanislav-54874b13/">LinkedIn</a>
+          <a target="_blank" href="https://github.com/tmstani23">Github</a>
+          <a target="_blank" href="https://codepen.io/tmstani23/">Codepen</a>
+          <a target="_blank" href="https://www.linkedin.com/in/timothy-stanislav-54874b13/">LinkedIn</a>
         </div>
         <p>This site was built with React JS, Babel, HTML and CSS <br>
           Created by: Timothy Stanislav - IndoorKin Productions &copy;</p>
